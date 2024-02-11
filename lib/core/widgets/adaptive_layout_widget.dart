@@ -15,8 +15,14 @@ class AdaptiveLayoutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      final mobileBreakPoint = constraints.maxWidth < 600;
-      final tabletBreakPoint = constraints.maxWidth < 900;
+      /// this is the original BreakPoints
+      // final mobileBreakPoint = constraints.maxWidth < 600;
+      // final tabletBreakPoint = constraints.maxWidth < 900;
+
+      /// I am using those for test
+      final mobileBreakPoint = constraints.maxWidth < 100;
+      final tabletBreakPoint = constraints.maxWidth < 300;
+
       if (mobileBreakPoint) {
         return mobileLayout != null ? mobileLayout!(context) : centerText;
       } else if (tabletBreakPoint) {
