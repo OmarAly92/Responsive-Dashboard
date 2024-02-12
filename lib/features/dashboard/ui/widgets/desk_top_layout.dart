@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'all_expenses_and_quick_invoice_section.dart';
 import 'desktop_layout/custom_drawer/custom_drawer.dart';
-import 'layout_body.dart';
 
 class DeskTopLayout extends StatefulWidget {
   const DeskTopLayout({super.key});
@@ -17,7 +17,7 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
       children: [
         const Expanded(child: CustomDrawer()),
         const SizedBox(width: 32),
-        const Expanded(flex: 3, child: LayoutBody()),
+        const Expanded(flex: 3, child: AllExpensesAndQuickInvoiceSection()),
         Expanded(flex: 2, child: Container()),
       ],
     );

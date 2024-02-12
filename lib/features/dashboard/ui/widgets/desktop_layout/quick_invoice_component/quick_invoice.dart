@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/features/dashboard/ui/widgets/desktop_layout/quick_invoice_component/latest_transaction.dart';
 
-import '../../../../../../core/widgets/widgets_container_background.dart';
+import '../../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/widgets/custom_background_container.dart';
+import 'latest_transaction.dart';
 import 'quick_invoice_header.dart';
+import 'send_money_section.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const WidgetsContainerBackground(
+    return const CustomBackgroundContainer(
       padding: EdgeInsets.all(24),
       margin: EdgeInsets.symmetric(vertical: 24),
       child: Column(
@@ -18,6 +20,11 @@ class QuickInvoice extends StatelessWidget {
           QuickInvoiceHeader(),
           SizedBox(height: 24),
           LatestTransaction(),
+          Divider(
+            color: AppColors.lightGreyBorderColor,
+            height: 48,
+          ),
+          SendMoneySection(),
         ],
       ),
     );

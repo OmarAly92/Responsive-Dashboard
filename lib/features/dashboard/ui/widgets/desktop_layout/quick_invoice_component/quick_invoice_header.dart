@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:responsive_dashboard/core/utils/app_colors.dart';
 
+import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_styles.dart';
 
 class QuickInvoiceHeader extends StatelessWidget {

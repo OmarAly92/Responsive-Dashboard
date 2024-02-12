@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../../../../../../core/utils/app_images.dart';
 import '../../../../../../core/utils/app_styles.dart';
 import '../../../../../../core/widgets/custom_list_tile.dart';
-import '../../../../models/custom-profile-model.dart';
 import '../../../../models/custom_list_tile_model.dart';
-import 'custom_profile.dart';
+import '../../../../models/user_info_list_tile_model.dart';
 import 'drawer_items_list_view.dart';
+import 'user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
@@ -24,10 +24,11 @@ class CustomDrawer extends StatelessWidget {
               padding: EdgeInsets.only(left: 15),
               child: Column(
                 children: [
-                  CustomProfile(
-                    customProfileModel: CustomProfileModel(
+                  UserInfoListTile(
+                    customProfileModel: UserInfoListTileModel(
                       title: 'Omar Aly',
                       subtitle: 'omar@gmail.com',
+                      image: Assets.imagesAvatar3,
                     ),
                   ),
                   SizedBox(height: 8),

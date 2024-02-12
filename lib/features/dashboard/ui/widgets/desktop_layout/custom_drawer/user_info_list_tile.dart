@@ -4,12 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_images.dart';
 import '../../../../../../core/utils/app_styles.dart';
-import '../../../../models/custom-profile-model.dart';
+import '../../../../models/user_info_list_tile_model.dart';
 
-class CustomProfile extends StatelessWidget {
-  const CustomProfile({super.key, required this.customProfileModel});
+class UserInfoListTile extends StatelessWidget {
+  const UserInfoListTile({super.key, required this.customProfileModel});
 
-  final CustomProfileModel customProfileModel;
+  final UserInfoListTileModel customProfileModel;
 
   @override
   Widget build(BuildContext context) {

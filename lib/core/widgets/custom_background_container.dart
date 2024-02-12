@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class WidgetsContainerBackground extends StatelessWidget {
-  const WidgetsContainerBackground({
+class CustomBackgroundContainer extends StatelessWidget {
+  const CustomBackgroundContainer({
     super.key,
     required this.child,
     this.padding = EdgeInsets.zero,
