@@ -3,7 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:responsive_dashboard/core/utils/app_colors.dart';
 import 'package:responsive_dashboard/core/utils/app_styles.dart';
 
-import '../../../../../../core/widgets/custom_button.dart';
+import '../../../../../../../core/widgets/custom_button.dart';
 import 'title_text_field.dart';
 
 class SendMoneySection extends StatelessWidget {

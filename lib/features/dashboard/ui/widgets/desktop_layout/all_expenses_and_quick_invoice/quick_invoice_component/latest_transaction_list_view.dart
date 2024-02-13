@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../core/utils/app_images.dart';
-import '../../../../../../core/widgets/user_info_list_tile.dart';
-import '../../../../models/user_info_list_tile_model.dart';
+import '../../../../../../../core/utils/app_images.dart';
+import '../../../../../../../core/widgets/user_info_list_tile.dart';
+import '../../../../../models/user_info_list_tile_model.dart';
 
 class LatestTransactionListView extends StatelessWidget {
   const LatestTransactionListView({super.key});

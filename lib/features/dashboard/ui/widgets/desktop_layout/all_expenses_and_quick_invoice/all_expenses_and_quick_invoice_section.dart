@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'desktop_layout/all_expenses_component/all_expenses.dart';
-import 'desktop_layout/quick_invoice_component/quick_invoice.dart';
+import 'all_expenses_component/all_expenses.dart';
+import 'quick_invoice_component/quick_invoice.dart';
 
 class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
   const AllExpensesAndQuickInvoiceSection({
@@ -13,7 +13,6 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(height: 40),
           AllExpenses(),
           QuickInvoice(),
         ],

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../../core/utils/app_styles.dart';
-import '../../../../../../core/widgets/custom_text_field.dart';
+import '../../../../../../../core/utils/app_styles.dart';
+import '../../../../../../../core/widgets/custom_text_field.dart';
 
 class TitleTextField extends StatelessWidget {
   const TitleTextField({
