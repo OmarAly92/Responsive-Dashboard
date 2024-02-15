@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:responsive_dashboard/features/dashboard/ui/widgets/desktop_layout/my_card_and_income/tansction_history_header.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_styles.dart';
+import 'transaction_history_header.dart';
 import 'transaction_history_list_items.dart';
 
 class TransactionHistory extends StatelessWidget {
@@ -16,7 +16,7 @@ class TransactionHistory extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TansctionHistoryHeader(),
+        const TransactionHistoryHeader(),
         const Gap(20),
         Text(
           '13 April 2022',

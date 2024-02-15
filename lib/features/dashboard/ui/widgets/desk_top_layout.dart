@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import 'desktop_layout/all_expenses_and_quick_invoice/all_expenses_and_quick_invoice_section.dart';
-import 'desktop_layout/custom_drawer/custom_drawer.dart';
-import 'desktop_layout/my_card_and_income/income.dart';
-import 'desktop_layout/my_card_and_income/my_card_and_transaction_history.dart';
+import 'all_expenses_and_quick_invoice/all_expenses_and_quick_invoice_section.dart';
+import 'custom_drawer/custom_drawer.dart';
+import 'my_card_and_income/income.dart';
+import 'my_card_and_income/my_card_and_transaction_history.dart';
 
 class DeskTopLayout extends StatefulWidget {
   const DeskTopLayout({super.key});
@@ -18,10 +18,10 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(flex: 1, child: CustomDrawer()),
+        Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
         Expanded(
-          flex: 5,
+          flex: 4,
           child: CustomScrollView(
             slivers: [
               SliverFillRemaining(

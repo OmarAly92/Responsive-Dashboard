@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../models/custom_expenses_item_model.dart';
+import '../../../../models/custom_expenses_item_model.dart';
 import 'active_and_inactive_expenses_item.dart';
 
 class ExpensesItem extends StatelessWidget {

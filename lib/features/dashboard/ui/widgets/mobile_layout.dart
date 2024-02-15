@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import 'desktop_layout/all_expenses_and_quick_invoice/all_expenses_and_quick_invoice_section.dart';
-import 'desktop_layout/my_card_and_income/income.dart';
-import 'desktop_layout/my_card_and_income/my_card_and_transaction_history.dart';
+import 'all_expenses_and_quick_invoice/all_expenses_and_quick_invoice_section.dart';
+import 'my_card_and_income/income.dart';
+import 'my_card_and_income/my_card_and_transaction_history.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({
@@ -19,7 +19,7 @@ class MobileLayout extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 30, right: 32),
+                padding: EdgeInsets.only(right: 32),
                 child: AllExpensesAndQuickInvoiceSection(),
               ),
               SizedBox(width: 24),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/app_styles.dart';
-import '../../../../models/income_item_model.dart';
+import '../../../models/income_item_model.dart';
 
 class IncomeDetailItem extends StatelessWidget {
   const IncomeDetailItem({super.key, required this.itemDetailsModel});

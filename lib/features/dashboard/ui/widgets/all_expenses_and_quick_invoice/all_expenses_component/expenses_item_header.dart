@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../../../core/utils/app_colors.dart';
-import '../../../../../models/custom_expenses_item_model.dart';
+import '../../../../models/custom_expenses_item_model.dart';
 
 class ExpensesItemHeader extends StatelessWidget {
   const ExpensesItemHeader({

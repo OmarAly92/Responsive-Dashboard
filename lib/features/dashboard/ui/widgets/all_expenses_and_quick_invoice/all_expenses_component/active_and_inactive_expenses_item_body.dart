@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../../core/utils/app_styles.dart';
-import '../../../../../models/custom_expenses_item_model.dart';
+import '../../../../models/custom_expenses_item_model.dart';
 
 class ActiveExpensesItemBody extends StatelessWidget {
   const ActiveExpensesItemBody({

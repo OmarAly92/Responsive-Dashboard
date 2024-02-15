@@ -15,7 +15,7 @@ class DrawerItemsListView extends StatefulWidget {
 class _DrawerItemsListViewState extends State<DrawerItemsListView> {
   int active = 0;
 
-  static const List<CustomListTileModel> _customListTileModel = [
+  static const List<CustomListTileModel> items = [
     CustomListTileModel(
       title: 'Dashboard',
       imageAssets: Assets.imagesDashboard,
@@ -45,26 +45,24 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: List.generate(
-        _customListTileModel.length,
-        (index) => GestureDetector(
-          onTap: () {
-            if (active != index) {
-              setState(() {
-                active = index;
-              });
-            }
-          },
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: CustomListTile(
-              customListTileModel: CustomListTileModel(
-                title: _customListTileModel[index].title,
-                imageAssets: _customListTileModel[index].imageAssets,
-                textStyle: _customListTileModel[index].textStyle,
-                active: active == index,
-              ),
+    return SliverList.builder(
+      itemCount: items.length,
+      itemBuilder: (context, index) => GestureDetector(
+        onTap: () {
+          if (active != index) {
+            setState(() {
+              active = index;
+            });
+          }
+        },
+        child: Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: CustomListTile(
+            customListTileModel: CustomListTileModel(
+              title: items[index].title,
+              imageAssets: items[index].imageAssets,
+              textStyle: items[index].textStyle,
+              active: active == index,
             ),
           ),
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../models/income_item_model.dart';
+import '../../../models/income_item_model.dart';
 import 'income_detail_item.dart';
 
 class IncomeDetail extends StatelessWidget {

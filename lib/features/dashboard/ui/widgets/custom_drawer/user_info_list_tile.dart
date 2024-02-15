@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_images.dart';
 import '../../../../../../core/utils/app_styles.dart';
-import '../../../../models/user_info_list_tile_model.dart';
+import '../../../models/user_info_list_tile_model.dart';
 
 class UserInfoListTile extends StatelessWidget {
   const UserInfoListTile({super.key, required this.customProfileModel});
