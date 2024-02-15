@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'desktop_layout/all_expenses_and_quick_invoice/all_expenses_and_quick_invoice_section.dart';
 import 'desktop_layout/custom_drawer/custom_drawer.dart';
+import 'mobile_layout.dart';
 
 class TabletLayout extends StatelessWidget {
   const TabletLayout({super.key});
@@ -14,16 +14,7 @@ class TabletLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           flex: 3,
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: EdgeInsets.only(top: 30, right: 32),
-                  child: AllExpensesAndQuickInvoiceSection(),
-                ),
-              ),
-            ],
-          ),
+          child: MobileLayout(),
         ),
       ],
     );
