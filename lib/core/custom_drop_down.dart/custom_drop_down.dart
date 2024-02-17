@@ -15,14 +15,14 @@ class CustomDropDown extends StatelessWidget {
         border: Border.all(color: AppColors.lightGreyBorderColor),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: const Row(
+      child: Row(
         children: [
           Text(
             'Monthly',
-            style: AppStyles.styleSemiBold20,
+            style: AppStyles.styleSemiBold20(context),
           ),
-          SizedBox(width: 18),
-          Icon(
+          const SizedBox(width: 18),
+          const Icon(
             CupertinoIcons.chevron_down,
             color: AppColors.darkBlue,
           )

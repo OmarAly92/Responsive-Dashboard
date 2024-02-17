@@ -31,13 +31,13 @@ class MyCardItem extends StatelessWidget {
             ListTile(
               title: Text(
                 'Name card',
-                style: AppStyles.styleRegular16.copyWith(
+                style: AppStyles.styleRegular16(context).copyWith(
                   color: Colors.white,
                 ),
               ),
               subtitle: Text(
                 'Stah Bandi',
-                style: AppStyles.styleMedium20.copyWith(
+                style: AppStyles.styleMedium20(context).copyWith(
                   color: Colors.white,
                 ),
               ),
@@ -48,14 +48,14 @@ class MyCardItem extends StatelessWidget {
               children: [
                 Text(
                   '0918 8124 0042 8129',
-                  style: AppStyles.styleSemiBold24.copyWith(
+                  style: AppStyles.styleSemiBold24(context).copyWith(
                     color: AppColors.white,
                   ),
                 ),
                 const Gap(8),
                 Text(
                   '12/20 - 124',
-                  style: AppStyles.styleRegular16.copyWith(
+                  style: AppStyles.styleRegular16(context).copyWith(
                     color: AppColors.white,
                   ),
                 ),

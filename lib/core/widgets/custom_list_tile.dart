@@ -19,7 +19,7 @@ class CustomListTile extends StatelessWidget {
       title: Text(
         customListTileModel.title,
         style: customListTileModel.active
-            ? AppStyles.styleBold16.copyWith(
+            ? AppStyles.styleBold16(context).copyWith(
                 color: AppColors.skyBlue,
               )
             : customListTileModel.textStyle,
