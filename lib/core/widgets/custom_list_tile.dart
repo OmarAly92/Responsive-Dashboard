@@ -16,13 +16,17 @@ class CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(
-        customListTileModel.title,
-        style: customListTileModel.active
-            ? AppStyles.styleBold16(context).copyWith(
-                color: AppColors.skyBlue,
-              )
-            : customListTileModel.textStyle,
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          customListTileModel.title,
+          style: customListTileModel.active
+              ? AppStyles.styleBold16(context).copyWith(
+                  color: AppColors.skyBlue,
+                )
+              : customListTileModel.textStyle,
+        ),
       ),
       leading: SvgPicture.asset(customListTileModel.imageAssets),
       trailing: Container(
