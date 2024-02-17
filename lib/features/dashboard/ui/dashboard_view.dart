@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/size_config.dart';
 import '../../../core/widgets/adaptive_layout_widget.dart';
 import 'widgets/custom_drawer/custom_drawer.dart';
 import 'widgets/desk_top_layout.dart';
@@ -22,8 +23,8 @@ class _DashboardViewState extends State<DashboardView> {
     final size = MediaQuery.sizeOf(context);
     return Scaffold(
       key: scaffoldKey,
-      appBar: size.width < 800 ? buildAppBar() : null,
-      drawer: size.width < 800 ? const CustomDrawer() : null,
+      appBar: size.width < SizeConfig.tablet ? buildAppBar() : null,
+      drawer: size.width < SizeConfig.tablet ? const CustomDrawer() : null,
       backgroundColor: AppColors.backgroundColor,
       body: AdaptiveLayoutWidget(
         mobileLayout: (context) => const MobileLayout(),

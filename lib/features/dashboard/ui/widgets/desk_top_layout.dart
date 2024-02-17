@@ -18,41 +18,39 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(child: CustomDrawer()),
+        Expanded(flex: 1, child: CustomDrawer()),
         SizedBox(width: 32),
         Expanded(
-          flex: 4,
+          flex: 5,
           child: CustomScrollView(
             slivers: [
               SliverFillRemaining(
                 hasScrollBody: false,
-                child: Expanded(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        flex: 3,
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 30),
-                          child: AllExpensesAndQuickInvoiceSection(),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 30),
+                        child: AllExpensesAndQuickInvoiceSection(),
+                      ),
+                    ),
+                    SizedBox(width: 24),
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 30),
+                        child: Column(
+                          children: [
+                            MyCardAndTransactionHistory(),
+                            Gap(24),
+                            Expanded(child: Income()),
+                          ],
                         ),
                       ),
-                      SizedBox(width: 24),
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 30),
-                          child: Column(
-                            children: [
-                              MyCardAndTransactionHistory(),
-                              Gap(24),
-                              Expanded(child: Income()),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ],

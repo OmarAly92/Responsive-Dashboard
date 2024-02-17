@@ -4,9 +4,7 @@ import '../../../models/income_item_model.dart';
 import 'income_detail_item.dart';
 
 class IncomeDetail extends StatelessWidget {
-  const IncomeDetail({
-    super.key,
-  });
+  const IncomeDetail({super.key});
 
   static const items = [
     IncomeItemModel(color: Color(0xFF208BC7), title: 'Design service', value: '%40'),
