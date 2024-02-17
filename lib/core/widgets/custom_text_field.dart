@@ -15,7 +15,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       cursorColor: AppColors.skyBlue,
-      style: AppStyles.styleRegular16,
+      style: AppStyles.styleRegular16(context),
       decoration: InputDecoration(
         hintText: hintText,
         fillColor: AppColors.lightGrey,
@@ -24,7 +24,7 @@ class CustomTextField extends StatelessWidget {
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(12),
         ),
-        hintStyle: AppStyles.styleRegular16.copyWith(
+        hintStyle: AppStyles.styleRegular16(context).copyWith(
           color: AppColors.lightGreyHintColor,
         ),
       ),

@@ -21,7 +21,7 @@ class TitleTextField extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
         const Gap(5),
         CustomTextField(

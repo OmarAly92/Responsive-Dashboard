@@ -25,17 +25,17 @@ class TransactionHistoryItem extends StatelessWidget {
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         title: Text(
           title,
-          style: AppStyles.styleSemiBold16,
+          style: AppStyles.styleSemiBold16(context),
         ),
         subtitle: Text(
           subtitle,
-          style: AppStyles.styleRegular16.copyWith(
+          style: AppStyles.styleRegular16(context).copyWith(
             color: AppColors.grey,
           ),
         ),
         trailing: Text(
           trailing,
-          style: AppStyles.styleSemiBold20.copyWith(
+          style: AppStyles.styleSemiBold20(context).copyWith(
             color: isWithDraw ? Colors.red : Colors.green,
           ),
         ),

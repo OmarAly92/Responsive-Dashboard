@@ -57,7 +57,7 @@ class SendMoneySection extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   'Add more details',
-                  style: AppStyles.styleSemiBold18.copyWith(
+                  style: AppStyles.styleSemiBold18(context).copyWith(
                     color: AppColors.skyBlue,
                   ),
                 ),
@@ -69,7 +69,7 @@ class SendMoneySection extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   'Send Money',
-                  style: AppStyles.styleSemiBold18.copyWith(
+                  style: AppStyles.styleSemiBold18(context).copyWith(
                     color: AppColors.white,
                   ),
                 ),
