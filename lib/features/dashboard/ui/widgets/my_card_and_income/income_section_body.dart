@@ -6,9 +6,7 @@ import 'income_chart.dart';
 import 'income_item.dart';
 
 class IncomeSectionBody extends StatelessWidget {
-  const IncomeSectionBody({
-    super.key,
-  });
+  const IncomeSectionBody({super.key});
 
   @override
   Widget build(BuildContext context) {
