@@ -11,7 +11,6 @@ class TabletLayout extends StatelessWidget {
     return const Row(
       children: [
         Expanded(flex: 1, child: CustomDrawer()),
-        SizedBox(width: 32),
         Expanded(
           flex: 3,
           child: Padding(

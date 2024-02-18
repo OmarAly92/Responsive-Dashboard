@@ -24,8 +24,9 @@ class _IncomeChartState extends State<IncomeChart> {
       pieTouchData: PieTouchData(
         enabled: true,
         touchCallback: (p0, pieTouchResponse) {
-          activeIndex = pieTouchResponse?.touchedSection?.touchedSectionIndex ?? -1;
-          setState(() {});
+          setState(() {
+            activeIndex = pieTouchResponse?.touchedSection?.touchedSectionIndex ?? -1;
+          });
         },
       ),
       sectionsSpace: 0,

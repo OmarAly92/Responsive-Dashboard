@@ -19,13 +19,21 @@ class IncomeDetailItem extends StatelessWidget {
           shape: const OvalBorder(),
         ),
       ),
-      title: Text(
-        itemDetailsModel.title,
-        style: AppStyles.styleRegular16(context),
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          itemDetailsModel.title,
+          style: AppStyles.styleRegular16(context),
+        ),
       ),
-      trailing: Text(
-        itemDetailsModel.value,
-        style: AppStyles.styleMedium16(context),
+      trailing: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          itemDetailsModel.value,
+          style: AppStyles.styleMedium16(context),
+        ),
       ),
     );
   }

@@ -16,18 +16,20 @@ class MobileLayout extends StatelessWidget {
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(right: 32),
-                child: AllExpensesAndQuickInvoiceSection(),
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Column(
+                children: [
+                  AllExpensesAndQuickInvoiceSection(),
+                  Gap(24),
+                  MyCardAndTransactionHistory(),
+                  Gap(24),
+                  Income(),
+                  Gap(24),
+                ],
               ),
-              SizedBox(width: 24),
-              MyCardAndTransactionHistory(),
-              Gap(24),
-              Income(),
-              Gap(24),
-            ],
+            ),
           ),
         ),
       ],

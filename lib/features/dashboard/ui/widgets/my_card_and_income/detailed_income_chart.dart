@@ -15,9 +15,16 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1,
-      child: PieChart(getChartData()),
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          activeIndex = -1;
+        });
+      },
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: PieChart(getChartData()),
+      ),
     );
   }
 
