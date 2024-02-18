@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 import '../../../../../../../core/utils/app_colors.dart';
 import '../../../../models/custom_expenses_item_model.dart';
@@ -46,17 +47,19 @@ class InActiveExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: BoxDecoration(
-          color: AppColors.white,
-          shape: BoxShape.rectangle,
-          border: Border.all(color: const Color(0xffF1F1F1)),
-          borderRadius: BorderRadius.circular(12)),
+      decoration: ShapeDecoration(
+        color: AppColors.white,
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(width: 1, color: Color(0xffF1F1F1)),
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           ExpensesItemHeader(customExpensesItemModel: customExpensesItemModel),
-          const SizedBox(height: 34),
+          const Gap(34),
           InActiveExpensesItemBody(customExpensesItemModel: customExpensesItemModel),
         ],
       ),

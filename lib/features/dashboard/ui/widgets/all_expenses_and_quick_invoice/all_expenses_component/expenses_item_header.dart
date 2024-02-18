@@ -22,20 +22,37 @@ class ExpensesItemHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          padding: const EdgeInsets.all(14),
-          decoration: ShapeDecoration(
-            color: shapeColor ?? AppColors.lightGrey,
-            shape: const OvalBorder(),
-          ),
-          child: SvgPicture.asset(
-            customExpensesItemModel.image,
-            colorFilter: shapeColor != null ? const ColorFilter.mode(Colors.white, BlendMode.srcIn) : null,
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(
+              maxWidth: 60,
+              maxHeight: 60,
+            ),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                decoration: ShapeDecoration(
+                  color: shapeColor ?? AppColors.lightGrey,
+                  shape: const OvalBorder(),
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    customExpensesItemModel.image,
+                    colorFilter: shapeColor != null ? const ColorFilter.mode(Colors.white, BlendMode.srcIn) : null,
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
-        Icon(
-          CupertinoIcons.forward,
-          color: iconColor ?? AppColors.darkBlue,
+        Flexible(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Icon(
+              CupertinoIcons.forward,
+              color: iconColor ?? AppColors.darkBlue,
+            ),
+          ),
         )
       ],
     );

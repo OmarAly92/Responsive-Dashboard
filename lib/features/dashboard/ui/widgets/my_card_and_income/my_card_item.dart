@@ -23,22 +23,30 @@ class MyCardItem extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ListTile(
-              title: Text(
-                'Name card',
-                style: AppStyles.styleRegular16(context).copyWith(
-                  color: Colors.white,
+              title: FittedBox(
+                alignment: AlignmentDirectional.centerStart,
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  'Name card',
+                  style: AppStyles.styleRegular16(context).copyWith(
+                    color: Colors.white,
+                  ),
                 ),
               ),
-              subtitle: Text(
-                'Stah Bandi',
-                style: AppStyles.styleMedium20(context).copyWith(
-                  color: Colors.white,
+              subtitle: FittedBox(
+                alignment: AlignmentDirectional.centerStart,
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  'Stah Bandi',
+                  style: AppStyles.styleMedium20(context).copyWith(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
@@ -46,17 +54,23 @@ class MyCardItem extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(
-                  '0918 8124 0042 8129',
-                  style: AppStyles.styleSemiBold24(context).copyWith(
-                    color: AppColors.white,
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    '0918 8124 0042 8129',
+                    style: AppStyles.styleSemiBold24(context).copyWith(
+                      color: AppColors.white,
+                    ),
                   ),
                 ),
-                const Gap(8),
-                Text(
-                  '12/20 - 124',
-                  style: AppStyles.styleRegular16(context).copyWith(
-                    color: AppColors.white,
+                const Gap(6),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    '12/20 - 124',
+                    style: AppStyles.styleRegular12(context).copyWith(
+                      color: AppColors.white,
+                    ),
                   ),
                 ),
               ],

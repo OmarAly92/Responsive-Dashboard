@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 import '../../../../../../../core/utils/app_images.dart';
 import '../../../../models/custom_expenses_item_model.dart';
 import 'expenses_item.dart';
 
 class ExpensesListView extends StatefulWidget {
-  const ExpensesListView({
-    super.key,
-  });
+  const ExpensesListView({super.key});
 
   @override
   State<ExpensesListView> createState() => _ExpensesListViewState();
@@ -18,45 +17,54 @@ class _ExpensesListViewState extends State<ExpensesListView> {
 
   @override
   Widget build(BuildContext context) {
-    final List<CustomExpensesItemModel> items = [
-      const CustomExpensesItemModel(
-        image: Assets.imagesBalance,
-        title: 'Balance',
-        date: 'April 2022',
-        price: '\$20,129',
-      ),
-      const CustomExpensesItemModel(
-        image: Assets.imagesIncome,
-        title: 'Income',
-        date: 'April 2022',
-        price: '\$20,129',
-      ),
-      const CustomExpensesItemModel(
-        image: Assets.imagesExpenses,
-        title: 'Expenses',
-        date: 'April 2022',
-        price: '\$20,129',
-      ),
-    ];
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: items.asMap().entries.map((e) {
-        final index = e.key;
-        final item = e.value;
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
-            onTap: () => updateActiveWidget(index),
-            child: Padding(
-              padding: index == 1 ? const EdgeInsets.symmetric(horizontal: 10) : EdgeInsets.zero,
-              child: ExpensesItem(
-                isActive: activeIndex == index,
-                item: item,
+            onTap: () => updateActiveWidget(0),
+            child: ExpensesItem(
+              isActive: activeIndex == 0,
+              item: const CustomExpensesItemModel(
+                image: Assets.imagesBalance,
+                title: 'Balance',
+                date: 'April 2022',
+                price: '\$20,129',
               ),
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const Gap(10),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateActiveWidget(1),
+            child: ExpensesItem(
+              isActive: activeIndex == 1,
+              item: const CustomExpensesItemModel(
+                image: Assets.imagesIncome,
+                title: 'Income',
+                date: 'April 2022',
+                price: '\$20,129',
+              ),
+            ),
+          ),
+        ),
+        const Gap(10),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateActiveWidget(2),
+            child: ExpensesItem(
+              isActive: activeIndex == 2,
+              item: const CustomExpensesItemModel(
+                image: Assets.imagesExpenses,
+                title: 'Expenses',
+                date: 'April 2022',
+                price: '\$20,129',
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/core/utils/app_styles.dart';
 
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/size_config.dart';
@@ -24,7 +25,14 @@ class _DashboardViewState extends State<DashboardView> {
     return Scaffold(
       key: scaffoldKey,
       appBar: size.width < SizeConfig.tablet ? buildAppBar() : null,
-      drawer: size.width < SizeConfig.tablet ? const CustomDrawer() : null,
+      drawer: size.width < SizeConfig.tablet
+          ? Drawer(
+              width: MediaQuery.sizeOf(context).width * .65,
+              elevation: 0,
+              backgroundColor: Color(0xffffffff),
+              child: SafeArea(child: CustomDrawer()),
+            )
+          : null,
       backgroundColor: AppColors.backgroundColor,
       body: AdaptiveLayoutWidget(
         mobileLayout: (context) => const MobileLayout(),
@@ -36,6 +44,12 @@ class _DashboardViewState extends State<DashboardView> {
 
   AppBar buildAppBar() {
     return AppBar(
+      title: Text(
+        'Dashboard',
+        style: AppStyles.styleSemiBold24(context).copyWith(
+          color: Colors.white,
+        ),
+      ),
       backgroundColor: AppColors.skyBlue,
       leading: IconButton(
         onPressed: () {
