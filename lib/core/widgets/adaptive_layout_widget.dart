@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
 
+import '../utils/size_config.dart';
+
 class AdaptiveLayoutWidget extends StatelessWidget {
   const AdaptiveLayoutWidget({
     super.key,
@@ -15,9 +17,11 @@ class AdaptiveLayoutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
+      final Size size = MediaQuery.sizeOf(context);
+
       /// this is the original BreakPoints
-      final mobileBreakPoint = constraints.maxWidth < 800;
-      final tabletBreakPoint = constraints.maxWidth < 1200;
+      final mobileBreakPoint = size.width < SizeConfig.tablet;
+      final tabletBreakPoint = size.width < SizeConfig.desktop;
 
       /// I am using those for test
       // final mobileBreakPoint = constraints.maxWidth < 100;

@@ -23,20 +23,32 @@ class TransactionHistoryItem extends StatelessWidget {
       color: AppColors.lightGrey,
       child: ListTile(
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-        title: Text(
-          title,
-          style: AppStyles.styleSemiBold16(context),
-        ),
-        subtitle: Text(
-          subtitle,
-          style: AppStyles.styleRegular16(context).copyWith(
-            color: AppColors.grey,
+        title: FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            title,
+            style: AppStyles.styleSemiBold16(context),
           ),
         ),
-        trailing: Text(
-          trailing,
-          style: AppStyles.styleSemiBold20(context).copyWith(
-            color: isWithDraw ? Colors.red : Colors.green,
+        subtitle: FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            subtitle,
+            style: AppStyles.styleRegular16(context).copyWith(
+              color: AppColors.grey,
+            ),
+          ),
+        ),
+        trailing: FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            trailing,
+            style: AppStyles.styleSemiBold20(context).copyWith(
+              color: isWithDraw ? Colors.red : Colors.green,
+            ),
           ),
         ),
       ),

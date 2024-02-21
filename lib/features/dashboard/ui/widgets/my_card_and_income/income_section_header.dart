@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../core/custom_drop_down.dart/custom_drop_down.dart';
 import '../../../../../../core/utils/app_styles.dart';
+import '../../../../../core/widgets/custom_drop_down.dart';
 
 class IncomeSectionHeader extends StatelessWidget {
   const IncomeSectionHeader({
